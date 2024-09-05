@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="Common\Messages.cs" />
     <Compile Include="Services\IInvoiceService.cs" />
-    <Compile Include="Services\InvoiceService.cs" />
+    <Compile Include="Implementations\InvoiceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

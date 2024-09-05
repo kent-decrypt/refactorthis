@@ -21,7 +21,7 @@ namespace RefactorThis.Persistence.Entities
         /// <param name="payments"></param>
         /// <param name="invoiceType"></param>
         /// <returns></returns>
-        public static Invoice Save(decimal amount, decimal amountPaid, InvoiceType invoiceType, decimal taxAmount, List<Payment> payments)
+        public static Invoice Create(decimal amount, decimal amountPaid, InvoiceType invoiceType, decimal taxAmount, List<Payment> payments)
         {
             return new Invoice()
             {
@@ -41,9 +41,9 @@ namespace RefactorThis.Persistence.Entities
         /// <param name="invoiceType"></param>
         /// <param name="taxAmount"></param>
         /// <returns></returns>
-        public static Invoice Save(decimal amount, decimal amountPaid, InvoiceType invoiceType, decimal taxAmount)
+        public static Invoice Create(decimal amount, decimal amountPaid, InvoiceType invoiceType, decimal taxAmount)
         {
-            return Save(amount, amountPaid, invoiceType, taxAmount, new List<Payment>());
+            return Create(amount, amountPaid, invoiceType, taxAmount, new List<Payment>());
         }
 
         /// <summary>
@@ -53,9 +53,9 @@ namespace RefactorThis.Persistence.Entities
         /// <param name="amountPaid"></param>
         /// <param name="invoiceType"></param>
         /// <returns></returns>
-        public static Invoice Save(decimal amount, decimal amountPaid, InvoiceType invoiceType)
+        public static Invoice Create(decimal amount, decimal amountPaid, InvoiceType invoiceType)
         {
-            return Save(amount, amountPaid, invoiceType, 0);
+            return Create(amount, amountPaid, invoiceType, 0);
         }
 
         /// <summary>

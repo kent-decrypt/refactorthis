@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using static RefactorThis.Domain.Common.Messages;
 
-namespace RefactorThis.Domain
+namespace RefactorThis.Domain.Implementations
 {
     /// <summary>
     /// Code implementation for the IInvoiceService
@@ -29,6 +29,11 @@ namespace RefactorThis.Domain
 				?? throw new NullReferenceException(Invoices.Exceptions.INVOICE_NOT_FOUND);
 
             var responseMessage = Validate(invoice);
+
+            if(string.IsNullOrEmpty(responseMessage))
+            {
+                return responseMessage;
+            }
 
             // Check if there are previous payments
             responseMessage = invoice.Payments != null && invoice.Payments.Any()
