@@ -1,5 +1,9 @@
-namespace RefactorThis.Persistence {
-	public class InvoiceRepository
+using RefactorThis.Persistence.Entities;
+
+namespace RefactorThis.Persistence
+{
+	// TODO: Delete this
+    public class InvoiceRepository
 	{
 		private Invoice _invoice;
 
